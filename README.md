@@ -1,0 +1,1 @@
+A lightweight wrapper around MySQLdb, but MySQLdb dosn`t support python3, This lib change driver from MySQLdb to pymysql, in order to support python3
