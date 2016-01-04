@@ -196,8 +196,8 @@ class Connection(object):
         # if it has been idle for too long (7 hours by default).
         if (self._db is None or
                 (time.time() - self._last_use_time > self.max_idle_time)):
+            self._last_use_time = time.time()
             self.reconnect()
-        self._last_use_time = time.time()
 
     def _cursor(self):
         self._ensure_connected()
